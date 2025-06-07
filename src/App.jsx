@@ -1,24 +1,50 @@
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar.jsx";
 import HeroSection from "./HeroSection.jsx";
 import ImagePlaceholder from "./ImagePlaceholder.jsx";
-import WhyChooseUsSection from "./WhyChooseUsSection.jsx"; // Ruta actualizada
-import PopularCategoriesSection from "./PopularCategoriesSection.jsx"; // Ruta actualizada
+import WhyChooseUsSection from "./WhyChooseUsSection.jsx";
+import PopularCategoriesSection from "./PopularCategoriesSection.jsx";
+import FeaturedProductsSection from "./FeaturedProductsSection.jsx";
+import LoginModal from "./LoginModal.jsx";
 
 function App() {
+  const [showLoginModal, setShowLoginModal] = useState(true);
+
+  useEffect(() => {
+    setShowLoginModal(true);
+  }, []);
+
+  const handleLoginSuccess = () => {
+    setShowLoginModal(false);
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Sección superior con fondo azul oscuro */}
-      <div className="bg-midnight-600 text-white">
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onLoginSuccess={handleLoginSuccess}
+      />
+
+      <div id="inicio" className="bg-midnight-600 text-white">
         <Navbar />
-        <div className="container mx-auto flex flex-grow items-center justify-center gap-12 px-10 py-16 lg:px-20">
+        <div className="container mx-auto flex flex-col items-center justify-center gap-12 px-4 py-16 lg:flex-row lg:px-20">
           <HeroSection />
           <ImagePlaceholder />
         </div>
       </div>
 
-      {/* Secciones siguientes con fondo blanco */}
-      <WhyChooseUsSection />
-      <PopularCategoriesSection />
+      <div id="por-que-elegirnos">
+        <WhyChooseUsSection />
+      </div>
+
+      <div id="categorias">
+        <PopularCategoriesSection />
+      </div>
+
+      <div id="productos-destacados">
+        <FeaturedProductsSection />
+      </div>
     </div>
   );
 }
