@@ -1,4 +1,4 @@
-import FeatureCard from "./FeatureCard.jsx"; // Ruta actualizada
+import FeatureCard from "./FeatureCard.jsx";
 import { TbCoin, TbShieldCheck, TbChartLine } from "react-icons/tb";
 
 function WhyChooseUsSection() {
@@ -26,12 +26,10 @@ function WhyChooseUsSection() {
   return (
     <section className="bg-white py-20 text-center">
       {" "}
-      {/* Fondo blanco */}
       <div className="container mx-auto px-4">
         <h2 className="mb-4 text-4xl font-bold text-gray-900">
           ¿Por qué elegir NicaShop?
         </h2>{" "}
-        {/* Texto oscuro */}
         <p className="mx-auto mb-12 max-w-2xl text-lg text-gray-700">
           La plataforma más completa para conectar vendedores y compradores con
           herramientas diseñadas para el éxito.
