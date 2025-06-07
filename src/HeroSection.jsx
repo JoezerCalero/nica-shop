@@ -1,7 +1,7 @@
 function HeroSection() {
   return (
     <div className="max-w-lg text-left">
-      <h1 className="mb-6 text-5xl leading-tight font-bold">
+      <h1 className="mb-6 text-5xl leading-tight font-bold text-white">
         La plataforma que <br />
         <span className="decoration-midnight-500 underline">conecta</span>{" "}
         vendedores <br />y compradores

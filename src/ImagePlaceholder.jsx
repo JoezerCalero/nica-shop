@@ -11,7 +11,7 @@ function ImagePlaceholder() {
         <div className="bg-midnight-400 absolute bottom-10 left-10 flex h-14 w-14 items-center justify-center rounded-md text-xl text-white shadow-md">
           <TbBriefcase2 size={22} />
         </div>
-        <div className="bg-midnight-500 h-20 w-20 rotate-45 rounded-md shadow-md"></div>
+        <div className="bg-midnight-500 h-20 w-20 rotate-45 shadow-md"></div>
       </div>
     </div>
   );
